@@ -6,11 +6,13 @@ spring:
 spring:
   profiles: dev
   application:
-    name: microservicecloud-consumer-dept-feign-80
+    name: microservicecloud-consumer-dept
 
 eureka:
   client:
-    prefer-ip-address: true
+    instance:
+      prefer-ip-address: true
+      instance-id: microservicecloud-consumer-dept-feign-80
     register-with-eureka: true
     service-url:
       defaultZone: http://eureka1.com:7001/eureka, http://eureka2.com:7002/eureka, http://eureka3.com:7003/eureka
