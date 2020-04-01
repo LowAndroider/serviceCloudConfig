@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-consumer-dept-feign-80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka1.com:7001/eureka, http://eureka2.com:7002/eureka, http://eureka3.com:7003/eureka
+
+feign:
+  hystrix:
+    enabled: true
+---
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-test
