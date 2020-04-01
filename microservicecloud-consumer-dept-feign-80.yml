@@ -10,6 +10,7 @@ spring:
 
 eureka:
   client:
+    prefer-ip-address: true
     register-with-eureka: true
     service-url:
       defaultZone: http://eureka1.com:7001/eureka, http://eureka2.com:7002/eureka, http://eureka3.com:7003/eureka
